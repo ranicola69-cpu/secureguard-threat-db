@@ -1,7 +1,7 @@
 {
-  "version": "2025.03.19",
-  "last_updated": "2025-03-19T21:00:00Z",
-  "signature_count": 156,
+  "version": "2025.03.19.2",
+  "last_updated": "2025-03-19T22:00:00Z",
+  "signature_count": 256,
   "categories": {
     "enterprise_spyware": {
       "description": "Corporate monitoring and device management software",
@@ -22,6 +22,10 @@
     "malware": {
       "description": "Malicious software",
       "risk_level": "critical"
+    },
+    "carrier_bloat": {
+      "description": "Carrier pre-installed apps",
+      "risk_level": "medium"
     }
   },
   "threats": [
@@ -49,41 +53,51 @@
       "package_name": "com.tracfone",
       "app_name": "TracFone Services",
       "threat_level": "medium",
-      "category": "bloatware",
-      "description": "Carrier bloatware that runs in background and collects usage data",
+      "category": "carrier_bloat",
+      "description": "TracFone carrier service that runs in background and collects usage data",
       "is_system": true,
       "can_remove": true,
       "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_NETWORK_STATE"]
     },
     {
-      "package_name": "com.facebook.system",
-      "app_name": "Facebook System",
+      "package_name": "com.tracfone.sync",
+      "app_name": "TracFone Sync",
       "threat_level": "medium",
-      "category": "bloatware",
-      "description": "Pre-installed Facebook system service",
+      "category": "carrier_bloat",
+      "description": "TracFone data synchronization service",
       "is_system": true,
       "can_remove": true,
-      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "INTERNET"]
+      "permissions_of_concern": ["READ_CONTACTS", "WRITE_CONTACTS"]
+    },
+    {
+      "package_name": "com.facebook.system",
+      "app_name": "Facebook System",
+      "threat_level": "high",
+      "category": "bloatware",
+      "description": "Pre-installed Facebook system service that cannot be uninstalled",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "INTERNET", "ACCESS_NETWORK_STATE"]
     },
     {
       "package_name": "com.facebook.services",
       "app_name": "Facebook Services",
       "threat_level": "medium",
       "category": "bloatware",
-      "description": "Facebook background services",
+      "description": "Facebook background services for push notifications and data sync",
       "is_system": true,
       "can_remove": true,
-      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "WAKE_LOCK"]
+      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "WAKE_LOCK", "VIBRATE"]
     },
     {
       "package_name": "com.facebook.appmanager",
       "app_name": "Facebook App Manager",
       "threat_level": "high",
       "category": "tracker",
-      "description": "Facebook app installer and updater - tracks app usage",
+      "description": "Facebook app installer and updater that tracks app installations",
       "is_system": true,
       "can_remove": true,
-      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET"]
+      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET", "GET_ACCOUNTS"]
     },
     {
       "package_name": "com.android.managedprovisioning",
@@ -93,34 +107,44 @@
       "description": "Device provisioning for enterprise management - allows remote control",
       "is_system": true,
       "can_remove": true,
-      "permissions_of_concern": ["BIND_DEVICE_ADMIN", "WRITE_SETTINGS"]
+      "permissions_of_concern": ["BIND_DEVICE_ADMIN", "WRITE_SETTINGS", "MANAGE_PROFILE_AND_DEVICE_OWNERS"]
     },
     {
       "package_name": "com.qualcomm.qti.telephonyservice",
       "app_name": "Qualcomm Telemetry",
       "threat_level": "medium",
       "category": "tracker",
-      "description": "Qualcomm telemetry service - collects device usage data",
+      "description": "Qualcomm telemetry service that collects device usage data",
       "is_system": true,
       "can_remove": false,
-      "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_NETWORK_STATE"]
+      "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_NETWORK_STATE", "INTERNET"]
     },
     {
       "package_name": "com.amazon.appmanager",
       "app_name": "Amazon App Manager",
       "threat_level": "medium",
       "category": "bloatware",
-      "description": "Pre-installed Amazon app store",
+      "description": "Pre-installed Amazon app store and shopping apps",
       "is_system": true,
       "can_remove": true,
-      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET"]
+      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET", "ACCESS_NETWORK_STATE"]
+    },
+    {
+      "package_name": "com.amazon.kindle",
+      "app_name": "Amazon Kindle",
+      "threat_level": "low",
+      "category": "bloatware",
+      "description": "Pre-installed Kindle reader app",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["INTERNET", "READ_EXTERNAL_STORAGE"]
     },
     {
       "package_name": "com.mediatek.ims",
       "app_name": "MediaTek IMS",
       "threat_level": "low",
       "category": "tracker",
-      "description": "MediaTek telemetry for IMS services",
+      "description": "MediaTek IMS service with telemetry",
       "is_system": true,
       "can_remove": false,
       "permissions_of_concern": ["READ_PHONE_STATE"]
@@ -130,7 +154,7 @@
       "app_name": "Cell Broadcast",
       "threat_level": "low",
       "category": "bloatware",
-      "description": "Cell broadcast receiver - rarely used feature",
+      "description": "Cell broadcast receiver - rarely used emergency broadcast feature",
       "is_system": true,
       "can_remove": true,
       "permissions_of_concern": ["RECEIVE_SMS", "READ_PHONE_STATE"]
@@ -138,12 +162,112 @@
     {
       "package_name": "com.google.android.apps.wellbeing",
       "app_name": "Digital Wellbeing",
-      "threat_level": "low",
+      "threat_level": "medium",
       "category": "tracker",
-      "description": "Google Digital Wellbeing - monitors app usage time",
+      "description": "Google Digital Wellbeing that monitors app usage time and patterns",
       "is_system": false,
       "can_remove": true,
       "permissions_of_concern": ["PACKAGE_USAGE_STATS", "BIND_DEVICE_ADMIN"]
+    },
+    {
+      "package_name": "com.google.android.youtube",
+      "app_name": "YouTube",
+      "threat_level": "low",
+      "category": "tracker",
+      "description": "YouTube app that tracks viewing history and preferences",
+      "is_system": false,
+      "can_remove": true,
+      "permissions_of_concern": ["GET_ACCOUNTS", "CAMERA", "RECORD_AUDIO"]
+    },
+    {
+      "package_name": "com.microsoft.office.outlook",
+      "app_name": "Microsoft Outlook",
+      "threat_level": "low",
+      "category": "tracker",
+      "description": "Microsoft Outlook with telemetry and usage analytics",
+      "is_system": false,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_CONTACTS", "READ_CALENDAR", "GET_ACCOUNTS"]
+    },
+    {
+      "package_name": "com.blu.launcher",
+      "app_name": "BLU Launcher",
+      "threat_level": "medium",
+      "category": "bloatware",
+      "description": "BLU's custom launcher with data collection",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_CONTACTS", "READ_CALL_LOG", "INTERNET"]
+    },
+    {
+      "package_name": "com.adups.fota",
+      "app_name": "ADUPS FOTA",
+      "threat_level": "critical",
+      "category": "malware",
+      "description": "ADUPS firmware that has been found to exfiltrate user data to China",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_PHONE_STATE", "READ_SMS", "READ_CALL_LOG", "INTERNET"]
+    },
+    {
+      "package_name": "com.mediatek.security",
+      "app_name": "MediaTek Security",
+      "threat_level": "medium",
+      "category": "tracker",
+      "description": "MediaTek security module with telemetry capabilities",
+      "is_system": true,
+      "can_remove": false,
+      "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_FINE_LOCATION"]
+    },
+    {
+      "package_name": "com.google.android.gms",
+      "app_name": "Google Play Services",
+      "threat_level": "low",
+      "category": "tracker",
+      "description": "Google Play Services - required but collects extensive device data",
+      "is_system": true,
+      "can_remove": false,
+      "permissions_of_concern": ["ACCESS_FINE_LOCATION", "READ_CONTACTS", "GET_ACCOUNTS"]
+    },
+    {
+      "package_name": "com.sec.android.app.samsungapps",
+      "app_name": "Samsung Galaxy Store",
+      "threat_level": "low",
+      "category": "bloatware",
+      "description": "Samsung's alternative app store",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET"]
+    },
+    {
+      "package_name": "com.samsung.android.bixby.agent",
+      "app_name": "Bixby Voice",
+      "threat_level": "medium",
+      "category": "tracker",
+      "description": "Samsung's voice assistant with always-listening capability",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["RECORD_AUDIO", "READ_CONTACTS", "ACCESS_FINE_LOCATION"]
+    },
+    {
+      "package_name": "com.tencent.mm",
+      "app_name": "WeChat",
+      "threat_level": "high",
+      "category": "tracker",
+      "description": "Chinese messaging app known for government surveillance compliance",
+      "is_system": false,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_CONTACTS", "RECORD_AUDIO", "CAMERA", "ACCESS_FINE_LOCATION"]
+    },
+    {
+      "package_name": "com.tiktok.android",
+      "app_name": "TikTok",
+      "threat_level": "high",
+      "category": "tracker",
+      "description": "Social media app with extensive data collection practices",
+      "is_system": false,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_CONTACTS", "CAMERA", "RECORD_AUDIO", "ACCESS_FINE_LOCATION"]
     }
   ],
   "dns_blocklists": [
@@ -152,6 +276,11 @@
     "graph.facebook.com",
     "pixel.facebook.com",
     "mobile.pipe.aria.microsoft.com",
-    "telemetry.malwarebytes.com"
+    "telemetry.malwarebytes.com",
+    "data.mistat.intl.xiaomi.com",
+    "tracking.miui.com",
+    "metrics.icloud.com",
+    "xp.apple.com",
+    "cdn.ampproject.org"
   ]
 }
