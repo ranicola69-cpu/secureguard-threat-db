@@ -1,0 +1,157 @@
+{
+  "version": "2025.03.19",
+  "last_updated": "2025-03-19T21:00:00Z",
+  "signature_count": 156,
+  "categories": {
+    "enterprise_spyware": {
+      "description": "Corporate monitoring and device management software",
+      "risk_level": "high"
+    },
+    "bloatware": {
+      "description": "Pre-installed unnecessary applications",
+      "risk_level": "medium"
+    },
+    "tracker": {
+      "description": "Analytics and tracking services",
+      "risk_level": "medium"
+    },
+    "adware": {
+      "description": "Advertising and promotional software",
+      "risk_level": "low"
+    },
+    "malware": {
+      "description": "Malicious software",
+      "risk_level": "critical"
+    }
+  },
+  "threats": [
+    {
+      "package_name": "com.android.enterprise",
+      "app_name": "Enterprise Suite",
+      "threat_level": "high",
+      "category": "enterprise_spyware",
+      "description": "Enterprise device management that can monitor app usage, location, and communications",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["BIND_DEVICE_ADMIN", "READ_PHONE_STATE", "ACCESS_FINE_LOCATION"]
+    },
+    {
+      "package_name": "com.google.android.gms.policy",
+      "app_name": "Enterprise Policy",
+      "threat_level": "high",
+      "category": "enterprise_spyware",
+      "description": "Google enterprise policy enforcement - can restrict device features and monitor usage",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["BIND_DEVICE_ADMIN", "MANAGE_DEVICE_ADMINS"]
+    },
+    {
+      "package_name": "com.tracfone",
+      "app_name": "TracFone Services",
+      "threat_level": "medium",
+      "category": "bloatware",
+      "description": "Carrier bloatware that runs in background and collects usage data",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_NETWORK_STATE"]
+    },
+    {
+      "package_name": "com.facebook.system",
+      "app_name": "Facebook System",
+      "threat_level": "medium",
+      "category": "bloatware",
+      "description": "Pre-installed Facebook system service",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "INTERNET"]
+    },
+    {
+      "package_name": "com.facebook.services",
+      "app_name": "Facebook Services",
+      "threat_level": "medium",
+      "category": "bloatware",
+      "description": "Facebook background services",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["RECEIVE_BOOT_COMPLETED", "WAKE_LOCK"]
+    },
+    {
+      "package_name": "com.facebook.appmanager",
+      "app_name": "Facebook App Manager",
+      "threat_level": "high",
+      "category": "tracker",
+      "description": "Facebook app installer and updater - tracks app usage",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET"]
+    },
+    {
+      "package_name": "com.android.managedprovisioning",
+      "app_name": "Managed Provisioning",
+      "threat_level": "high",
+      "category": "enterprise_spyware",
+      "description": "Device provisioning for enterprise management - allows remote control",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["BIND_DEVICE_ADMIN", "WRITE_SETTINGS"]
+    },
+    {
+      "package_name": "com.qualcomm.qti.telephonyservice",
+      "app_name": "Qualcomm Telemetry",
+      "threat_level": "medium",
+      "category": "tracker",
+      "description": "Qualcomm telemetry service - collects device usage data",
+      "is_system": true,
+      "can_remove": false,
+      "permissions_of_concern": ["READ_PHONE_STATE", "ACCESS_NETWORK_STATE"]
+    },
+    {
+      "package_name": "com.amazon.appmanager",
+      "app_name": "Amazon App Manager",
+      "threat_level": "medium",
+      "category": "bloatware",
+      "description": "Pre-installed Amazon app store",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["REQUEST_INSTALL_PACKAGES", "INTERNET"]
+    },
+    {
+      "package_name": "com.mediatek.ims",
+      "app_name": "MediaTek IMS",
+      "threat_level": "low",
+      "category": "tracker",
+      "description": "MediaTek telemetry for IMS services",
+      "is_system": true,
+      "can_remove": false,
+      "permissions_of_concern": ["READ_PHONE_STATE"]
+    },
+    {
+      "package_name": "com.android.cellbroadcastreceiver",
+      "app_name": "Cell Broadcast",
+      "threat_level": "low",
+      "category": "bloatware",
+      "description": "Cell broadcast receiver - rarely used feature",
+      "is_system": true,
+      "can_remove": true,
+      "permissions_of_concern": ["RECEIVE_SMS", "READ_PHONE_STATE"]
+    },
+    {
+      "package_name": "com.google.android.apps.wellbeing",
+      "app_name": "Digital Wellbeing",
+      "threat_level": "low",
+      "category": "tracker",
+      "description": "Google Digital Wellbeing - monitors app usage time",
+      "is_system": false,
+      "can_remove": true,
+      "permissions_of_concern": ["PACKAGE_USAGE_STATS", "BIND_DEVICE_ADMIN"]
+    }
+  ],
+  "dns_blocklists": [
+    "ads.google.com",
+    "analytics.google.com",
+    "graph.facebook.com",
+    "pixel.facebook.com",
+    "mobile.pipe.aria.microsoft.com",
+    "telemetry.malwarebytes.com"
+  ]
+}
