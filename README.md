@@ -1,82 +1,55 @@
 <div align="center">
 
-```
-████████╗██╗  ██╗██████╗ ███████╗ █████╗ ████████╗    ██████╗ ██████╗ 
-╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔══██╗╚══██╔══╝    ██╔══██╗██╔══██╗
-   ██║   ███████║██████╔╝█████╗  ███████║   ██║       ██║  ██║██████╔╝
-   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██║   ██║       ██║  ██║██╔══██╗
-   ██║   ██║  ██║██║  ██║███████╗██║  ██║   ██║       ██████╔╝██████╔╝
-   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═════╝ ╚═════╝ 
-```
+# 🔍 SecureGuard Threat Database
 
-# SECUREGUARD THREAT DATABASE
+### *Live Threat Intelligence Feed*
 
-**Spyware · Bloatware · Malware Definitions**
-
-*Used by the [Secure Guard](https://github.com/ranicola69-cpu/secure-guard-blu-g64) app · DPHMS · 2026*
-
----
-
-[![Donate via CashApp](https://img.shields.io/badge/💸%20DONATE-%24ranicola1-00D632?style=for-the-badge&logo=cashapp)](https://cash.app/$ranicola1)
-&nbsp;&nbsp;
-[![Donate via PayPal](https://img.shields.io/badge/💰%20PAYPAL-Donate-003087?style=for-the-badge&logo=paypal)](https://www.paypal.com/donate?business=Ranicola69%40gmail.com)
+[![DPHMS](https://img.shields.io/badge/DPHMS-Threat%20Intel-8B0000?style=for-the-badge)](https://github.com/ranicola69-cpu)
+[![JSON](https://img.shields.io/badge/Format-JSON-yellow?style=for-the-badge&logo=json)](https://github.com/ranicola69-cpu/secureguard-threat-db/blob/main/threats.json)
+[![Secure Guard](https://img.shields.io/badge/Used%20By-Secure%20Guard-3DDC84?style=for-the-badge)](https://github.com/ranicola69-cpu/secure-guard-blu-g64)
 
 </div>
 
 ---
 
-## What Is This?
-
-This repository contains the threat definitions database used by the **Secure Guard** Android app. It includes known spyware packages, carrier bloatware signatures, malware hashes, and suspicious process flags.
+> The centralized threat intelligence database powering the **Secure Guard** app. Updated continuously with new threat signatures, malware hashes, and network IOCs.
 
 ---
 
-## Database Contents
+## 📡 Usage
 
-| Category | Description |
-|---|---|
-| 🦠 Malware | Known malicious Android package signatures |
-| 👁️ Spyware | Tracking and surveillance package IDs |
-| 📦 Bloatware | Carrier and OEM preinstalled junk |
-| ⚠️ Suspicious | Flagged processes and behaviors |
-
----
-
-## Usage
-
-The Secure Guard app pulls threat definitions from this repository automatically. You can also browse or contribute definitions manually.
+This database is consumed automatically by [Secure Guard](https://github.com/ranicola69-cpu/secure-guard-blu-g64). The app pulls from this feed on each scan to cross-reference against known threats.
 
 ```json
+// threats.json structure
 {
-  "package": "com.example.spyware",
-  "category": "spyware",
-  "severity": "high",
-  "description": "Known surveillance package"
+  "version": "...",
+  "updated": "...",
+  "threats": [
+    {
+      "id": "...",
+      "name": "...",
+      "type": "malware | spyware | adware | network",
+      "severity": "low | medium | high | critical",
+      "hash": "...",
+      "description": "..."
+    }
+  ]
 }
 ```
 
 ---
 
-## Related
+## 🔗 Integration
 
-[![Secure Guard](https://img.shields.io/badge/App-Secure%20Guard-red?style=flat-square&logo=android)](https://github.com/ranicola69-cpu/secure-guard-blu-g64)
-
----
-
-## Support the Work
-
-<div align="center">
-
-[![CashApp](https://img.shields.io/badge/CashApp-%24ranicola1-00D632?style=for-the-badge&logo=cashapp&logoColor=white)](https://cash.app/$ranicola1)
-
-[![PayPal](https://img.shields.io/badge/PayPal-Ranicola69%40gmail.com-003087?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate?business=Ranicola69%40gmail.com)
-
-*All proceeds support independent research and development under DPHMS.*
-
-</div>
+| App | Status |
+|-----|--------|
+| [Secure Guard BLU G64](https://github.com/ranicola69-cpu/secure-guard-blu-g64) | ✅ Live |
 
 ---
 
 <div align="center">
-<sub>DPHMS · 2026 · All rights reserved</sub>
+
+*DPHMS — Defense Protocol & High-Mobility Security*
+
 </div>
