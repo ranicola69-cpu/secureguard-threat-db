@@ -1,18 +1,12 @@
 <div align="center">
 
 ```
-████████╗██╗  ██╗██████╗ ███████╗ █████╗ ████████╗
-╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔══██╗╚══██╔══╝
-   ██║   ███████║██████╔╝█████╗  ███████║   ██║   
-   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██║   ██║   
-   ██║   ██║  ██║██║  ██║███████╗██║  ██║   ██║   
-   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   
-             ██████╗ ██████╗                       
-            ██╔══██╗██╔══██╗                      
-            ██║  ██║██████╔╝                      
-            ██║  ██║██╔══██╗                      
-            ██████╔╝██████╔╝                      
-            ╚═════╝ ╚═════╝                       
+████████╗██╗  ██╗██████╗ ███████╗ █████╗ ████████╗    ██████╗ ██████╗ 
+╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔══██╗╚══██╔══╝    ██╔══██╗██╔══██╗
+   ██║   ███████║██████╔╝█████╗  ███████║   ██║       ██║  ██║██████╔╝
+   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██║   ██║       ██║  ██║██╔══██╗
+   ██║   ██║  ██║██║  ██║███████╗██║  ██║   ██║       ██████╔╝██████╔╝
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝       ╚═════╝ ╚═════╝ 
 ```
 
 # SECUREGUARD THREAT DATABASE
@@ -23,7 +17,9 @@
 
 ---
 
-[![Donate via CashApp](https://img.shields.io/badge/💸%20DONATE-$ranicola1-00D632?style=for-the-badge&logo=cashapp)](https://cash.app/$ranicola1)
+[![Donate via CashApp](https://img.shields.io/badge/💸%20DONATE-%24ranicola1-00D632?style=for-the-badge&logo=cashapp)](https://cash.app/$ranicola1)
+&nbsp;&nbsp;
+[![Donate via PayPal](https://img.shields.io/badge/💰%20PAYPAL-Donate-003087?style=for-the-badge&logo=paypal)](https://www.paypal.com/donate?business=Ranicola69%40gmail.com)
 
 </div>
 
@@ -71,7 +67,9 @@ The Secure Guard app pulls threat definitions from this repository automatically
 
 <div align="center">
 
-[![CashApp](https://img.shields.io/badge/CashApp-$ranicola1-00D632?style=for-the-badge&logo=cashapp&logoColor=white)](https://cash.app/$ranicola1)
+[![CashApp](https://img.shields.io/badge/CashApp-%24ranicola1-00D632?style=for-the-badge&logo=cashapp&logoColor=white)](https://cash.app/$ranicola1)
+
+[![PayPal](https://img.shields.io/badge/PayPal-Ranicola69%40gmail.com-003087?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate?business=Ranicola69%40gmail.com)
 
 *All proceeds support independent research and development under DPHMS.*
 
