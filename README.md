@@ -53,3 +53,12 @@ This database is consumed automatically by [Secure Guard](https://github.com/ran
 *DPHMS — Defense Protocol & High-Mobility Security*
 
 </div>
+---
+
+## More DPHMS Apps
+
+| App | Description | Link |
+|-----|-------------|------|
+| [Arbiter's Grammar](https://github.com/ranicola69-cpu/arbiters-grammar) | 30 laws of manipulation and control | [Web App](https://dphms-apps.replit.app/arbiters-grammar/) • [APK](https://github.com/ranicola69-cpu/arbiters-grammar/releases/download/v0.1.0-beta/ArbiterGrammar-0.1.0-beta.apk) |
+| [BRINGWAR Gaming](https://github.com/ranicola69-cpu/bringwar-gaming-rewards) | Gaming rewards platform | [APK v1.5.0](https://github.com/ranicola69-cpu/bringwar-gaming-rewards/releases/download/v1.5.0/BRINGWAR-Gaming-Rewards-v1.5.0.apk) |
+| [Secure Guard](https://github.com/ranicola69-cpu/secure-guard-blu-g64) | Android security suite | [APK](https://github.com/ranicola69-cpu/secure-guard-blu-g64/releases/download/v0.1.0-beta/SecureGuard-0.1.0-beta.apk) |
